@@ -14,14 +14,14 @@ copilot.setup {
     },
   },
   suggestion = {
-    enabled = true,
+    enabled = false,
     auto_trigger = true,
     keymap = {
       accept = "<c-l>",
       next = "<c-j>",
       prev = "<c-k>",
       dismiss = "<c-h>",
-    },
+    }, 
   },
   filetypes = {
     yaml = false,

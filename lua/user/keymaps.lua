@@ -17,11 +17,6 @@ keymap("n", "<m-k>", "<C-w>k", opts)
 keymap("n", "<m-l>", "<C-w>l", opts)
 keymap("n", "<m-tab>", "<c-6>", opts)
 
-keymap("n", "<Down>", "<cmd>BookmarkNext<cr>", opts)
-keymap("n", "<Up>", "<cmd>BookmarkPrev<cr>", opts)
-keymap("n", "<Right>", "<cmd>FilemarkNext<cr>", opts)
-keymap("n", "<Left>", "<cmd>FilemarkPrev<cr>", opts)
-
 function _G.set_terminal_keymaps()
   vim.api.nvim_buf_set_keymap(0, "t", "<m-h>", [[<C-\><C-n><C-W>h]], opts)
   vim.api.nvim_buf_set_keymap(0, "t", "<m-j>", [[<C-\><C-n><C-W>j]], opts)
