@@ -53,6 +53,7 @@ lvim.plugins = {
   "kevinhwang91/nvim-bqf",
   "is0n/jaq-nvim",
   "nacro90/numb.nvim",
+  "tpope/vim-fugitive",
   "neogitorg/neogit",
   "sindrets/diffview.nvim",
   "simrat39/rust-tools.nvim",

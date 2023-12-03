@@ -23,13 +23,13 @@ require("typescript").setup {
     settings = {
       typescript = {
         inlayHints = {
-          includeInlayEnumMemberValueHints = false,
-          includeInlayFunctionLikeReturnTypeHints = false,
-          includeInlayFunctionParameterTypeHints = false,
-          includeInlayParameterNameHints = "none", -- 'none' | 'literals' | 'all';
-          includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-          includeInlayPropertyDeclarationTypeHints = false,
-          includeInlayVariableTypeHints = false,
+          includeInlayEnumMemberValueHints = true,
+          includeInlayFunctionLikeReturnTypeHints = true,
+          includeInlayFunctionParameterTypeHints = true,
+          includeInlayParameterNameHints = "literals", -- 'none' | 'literals' | 'all';
+          includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+          includeInlayPropertyDeclarationTypeHints = true,
+          includeInlayVariableTypeHints = true,
         },
       },
     },

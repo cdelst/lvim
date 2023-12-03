@@ -21,7 +21,7 @@ copilot.setup {
       next = "<c-j>",
       prev = "<c-k>",
       dismiss = "<c-h>",
-    }, 
+    },
   },
   filetypes = {
     yaml = false,
