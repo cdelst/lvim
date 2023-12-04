@@ -41,7 +41,6 @@ lvim.plugins = {
   "folke/todo-comments.nvim",
   "windwp/nvim-spectre",
   "f-person/git-blame.nvim",
-  "ruifm/gitlinker.nvim",
   "mattn/vim-gist",
   "mattn/webapi-vim",
   "folke/zen-mode.nvim",
@@ -128,6 +127,18 @@ lvim.plugins = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
     },
+  },
+  {
+    "linrongbin16/gitlinker.nvim",
+    config = function()
+      require("gitlinker").setup()
+    end,
+  },
+  {
+    "phaazon/hop.nvim",
+    config = function()
+      require("hop").setup()
+    end,
   },
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",

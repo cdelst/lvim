@@ -3,8 +3,9 @@ lvim.builtin.which_key.setup.ignore_missing = true
 
 lvim.builtin.which_key.mappings["b"] = { "<cmd>Telescope buffers<cr>", "Buffers" }
 lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
-lvim.builtin.which_key.mappings["h"] = { "<cmd>nohlsearch<cr>", "nohl" }
 lvim.builtin.which_key.mappings["o"] = { "<cmd>AerialToggle!<cr>", "Aerial Outline" }
+-- lvim.builtin.which_key.mappings["h"] = { "<cmd>nohlsearch<cr>", "nohl" }
+
 lvim.builtin.which_key.mappings["q"] = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" }
 lvim.builtin.which_key.mappings["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" }
 -- lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
@@ -148,17 +149,6 @@ lvim.builtin.which_key.mappings["t"] = {
 --   -- t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
 -- }
 
-lvim.builtin.which_key.mappings["n"] = {
-  name = "Notes",
-  c = { "<cmd>Telekasten show_calendar<cr>", "Calendar" },
-  n = { "<cmd>Telekasten new_note<cr>", "Note" },
-  f = { "<cmd>Telekasten find_notes<cr>", "Find" },
-  F = { "<cmd>Telekasten find_daily_notes<cr>", "Find Journal" },
-  j = { "<cmd>Telekasten goto_today<cr>", "Journal" },
-  p = { "<cmd>Telekasten panel<cr>", "Panel" },
-  t = { "<cmd>Telekasten toggle_todo<cr>", "Toggle Todo" },
-}
-
 lvim.builtin.which_key.mappings[";"] = nil
 -- lvim.builtin.which_key.mappings["c"] = nil
 lvim.builtin.which_key.mappings["L"] = nil
@@ -199,3 +189,17 @@ local m_mappings = {
 }
 
 which_key.register(m_mappings, m_opts)
+
+local hop_mappings = {
+  name = "Hop",
+  w = { "<cmd>HopWord<cr>", "Word" },
+  W = { "<cmd>Hop*MW<cr>", "Word BC" },
+  c = { "<cmd>HopChar1<cr>", "Char" },
+  l = { "<cmd>HopLine<cr>", "Line" },
+  p = { "<cmd>HopPattern<cr>", "Pattern" },
+  s = { "<cmd>HopChar2<cr>", "Char 2" },
+  a = { "<cmd>HopAnywhere<cr>", "Anywhere" },
+}
+
+lvim.builtin.which_key.mappings["h"] = hop_mappings
+lvim.builtin.which_key.vmappings["h"] = hop_mappings
