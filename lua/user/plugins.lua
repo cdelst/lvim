@@ -120,6 +120,15 @@ lvim.plugins = {
     event = "BufRead",
   },
   "ThePrimeagen/vim-be-good",
+  {
+    "stevearc/aerial.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 

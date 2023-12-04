@@ -2,7 +2,7 @@ require("scrollbar").setup {
   show = true,
   show_in_active_only = false,
   set_highlights = true,
-  folds = 1000, -- handle folds, set to number to disable folds if no. of lines in buffer exceeds this
+  folds = 1000,      -- handle folds, set to number to disable folds if no. of lines in buffer exceeds this
   max_lines = false, -- disables if no. of lines in buffer exceeds this
   handle = {
     text = " ",
@@ -115,9 +115,9 @@ require("scrollbar").setup {
   },
   handlers = {
     cursor = true,
-    diagnostic = false,
+    diagnostic = true,
     gitsigns = false, -- Requires gitsigns
     handle = true,
-    search = false, -- Requires hlslens
+    search = false,   -- Requires hlslens
   },
 }

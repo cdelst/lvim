@@ -1,7 +1,5 @@
 # My LunarVim Config
-
 ## Get healthy
-
 Open `nvim` and enter the following:
 
 ```
