@@ -53,32 +53,12 @@ Run: `$ fc-cache -f -v`
 
 **NOTE:** (If you are seeing boxes without icons, try changing this line from `false` to `true`: [link](https://github.com/ChristianChiarulli/nvim/blob/ac41efa237caf3a498077df19a3f31ca4b35caf3/lua/user/icons.lua#L5))
 
-## Java Debugging and Testing
+REMEMBER TO ADD A CODESTATS.LUA FILE IN THE USER SECTION WITH THE FORMAT:
+```lua
+local status_ok, telescope = pcall(require, "codestats")
+if not status_ok then
+  return
+end
 
-```sh
-git clone git@github.com:microsoft/java-debug.git
-cd java-debug/
-./mvnw clean install
+vim.g.code_stats_api_key = "replace me"
 ```
-
-```sh
-git clone git@github.com:microsoft/vscode-java-test.git
-cd vscode-java-test
-npm install
-npm run build-plugin
-```
-
-## Install latest rust-analyzer binary
-
-```sh
-$ mkdir -p ~/.local/bin
-$ curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
-$ chmod +x ~/.local/bin/rust-analyzer
-```
-
-## TODO
-
-- use codicons (update codicons)
-- fix border
-- darken border around cmp
-- hl groups for noice
