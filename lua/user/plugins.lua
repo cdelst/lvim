@@ -1,4 +1,4 @@
--- Additional Plugins
+-- Additional Plugins this is a test to see if wakatime is working.  We'll see I guess in a bit.  It should load any second now.
 lvim.plugins = {
   {
     "mawkler/modicator.nvim",
@@ -139,6 +139,10 @@ lvim.plugins = {
     config = function()
       require("hop").setup()
     end,
+  },
+  { "wakatime/vim-wakatime" },
+  {
+    url = "https://gitlab.com/code-stats/code-stats-vim.git",
   },
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
