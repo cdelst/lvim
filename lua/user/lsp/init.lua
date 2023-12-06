@@ -9,7 +9,7 @@ local capabilities = require("lvim.lsp").common_capabilities()
 
 require("typescript").setup {
   -- disable_commands = false, -- prevent the plugin from creating Vim commands
-  debug = false,     -- enable debug logging for commands
+  debug = false, -- enable debug logging for commands
   go_to_source_definition = {
     fallback = true, -- fall back to standard LSP definition on failure
   },
@@ -39,9 +39,10 @@ require("typescript").setup {
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "stylua",     filetypes = { "lua" } },
-  { command = "shfmt",      filetypes = { "sh", "zsh" } },
-  { command = "prettier_d", filetypes = { "css", "javascript", "javascriptreact", "typescript", "typescriptreact" } },
+  { command = "stylua", filetypes = { "lua" } },
+  { command = "shfmt", filetypes = { "sh", "zsh" } },
+  { command = "prettier", filetypes = { "css", "javascript", "javascriptreact", "typescript", "typescriptreact" } },
+  { command = "goimports", filetypes = { "go" } },
 }
 
 -- lvim.lsp.on_attach_callback = function(client, bufnr)

@@ -15,3 +15,5 @@ vim.api.nvim_create_autocmd({ "Colorscheme" }, {
     vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#388bfd", bg = "NONE" })
   end,
 })
+
+lvim.o.number = true

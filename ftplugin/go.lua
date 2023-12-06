@@ -22,7 +22,8 @@ lsp_manager.setup("gopls", {
   settings = {
     gopls = {
       usePlaceholders = true,
-      gofumpt = true,
+      gofumpt = false,
+      gofmt = true,
       codelenses = {
         generate = false,
         gc_details = true,
@@ -48,6 +49,18 @@ gopher.setup {
   },
 }
 
+local lspconfig = require "lspconfig"
+lspconfig.gopls.setup {}
+
+-- vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.format({ async = true })]]
+
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*.go",
+--   callback = function()
+--     vim.lsp.buf.code_action { context = { only = { "source.organizeImports" } }, apply = true }
+--   end,
+-- })
+
 ------------------------
 -- Language Key Mappings
 ------------------------
@@ -61,11 +74,6 @@ if not dap_ok then
 end
 
 dapgo.setup()
-
-
-
-
-
 
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then

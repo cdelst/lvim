@@ -15,6 +15,10 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "python",
   "javascript",
+  "go",
+  "scala",
+  "terraform",
+  "lua",
 }
 
 lvim.builtin.treesitter.rainbow = {
