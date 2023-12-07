@@ -167,6 +167,9 @@ lvim.plugins = {
   {
     "rebelot/kanagawa.nvim",
   },
+  {
+    "rafamadriz/friendly-snippets",
+  }
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 
