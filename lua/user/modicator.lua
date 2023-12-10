@@ -17,3 +17,5 @@ vim.api.nvim_create_autocmd({ "Colorscheme" }, {
 })
 
 lvim.o.number = true
+lvim.o.termguicolors = true
+lvim.o.cursorline = true

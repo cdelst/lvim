@@ -2,7 +2,6 @@
 lvim.plugins = {
   {
     "mawkler/modicator.nvim",
-    event = "ColorScheme",
   },
   "HiPhish/nvim-ts-rainbow2",
   -- {
@@ -158,18 +157,10 @@ lvim.plugins = {
     ft = { "go", "gomod" },
     build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
   },
-  {
-    "marko-cerovac/material.nvim",
-  },
-  {
-    "ellisonleao/gruvbox.nvim",
-  },
-  {
-    "rebelot/kanagawa.nvim",
-  },
+  { "Everblush/nvim", name = "everblush" },
   {
     "rafamadriz/friendly-snippets",
-  }
+  },
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 
