@@ -161,6 +161,11 @@ lvim.plugins = {
   {
     "rafamadriz/friendly-snippets",
   },
+  {
+    "stevearc/conform.nvim",
+    opts = {},
+  },
+
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 

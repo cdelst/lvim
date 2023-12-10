@@ -187,13 +187,6 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
 --   end,
 -- })
 
--- Auto save
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-  callback = function()
-    vim.lsp.buf.format { async = true }
-  end,
-})
-
 -- do things when lsp attaches
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
