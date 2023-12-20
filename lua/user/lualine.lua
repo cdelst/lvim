@@ -1,7 +1,15 @@
 local components = require "lvim.core.lualine.components"
 
 if lvim.colorscheme == "onedark" then
-  lvim.builtin.lualine.options.theme = "everblush"
+  lvim.builtin.lualine.options.theme = "onedark"
+
+  lvim.builtin.lualine.options = {
+    theme = "onedark",
+    section_separators = { left = "", right = "" },
+    component_separators = { left = "", right = "" },
+    icons_enabled = true,
+    path = 1,
+  }
 
   local diagnostics = {
     "diagnostics",
@@ -59,15 +67,20 @@ if lvim.colorscheme == "onedark" then
   lvim.builtin.lualine.sections.lualine_a = {
     components.branch,
   }
-  lvim.builtin.lualine.sections.lualine_b = {}
 
-  lvim.builtin.lualine.sections.lualine_c = {
+  lvim.builtin.lualine.sections.lualine_b = {
     diagnostics,
     components.python_env,
   }
 
   lvim.builtin.lualine.sections.lualine_c = {
-    diagnostics,
+    { "diff", symbols = { added = " ", modified = "~", removed = " " } },
+    {
+      "filename",
+      path = 1,
+      symbols = { modified = " ", readonly = " ", unnamed = " ", newfile = " " },
+      newfile_status = true,
+    },
   }
 
   local function location()
