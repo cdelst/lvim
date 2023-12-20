@@ -164,7 +164,12 @@ lvim.plugins = {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
   },
-
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 
