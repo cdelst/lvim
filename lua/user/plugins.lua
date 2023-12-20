@@ -17,7 +17,7 @@ lvim.plugins = {
   },
   "kkharji/sqlite.lua",
   { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
-  { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
+  { "navarasu/onedark.nvim" },
   { url = "git@github.com:LunarVim/primer.nvim.git" },
   -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",
@@ -170,6 +170,27 @@ lvim.plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
+  {
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+      -- configurations go here
+    },
+  },
+  {
+    "f-person/git-blame.nvim",
+    event = "BufRead",
+    config = function()
+      vim.cmd "highlight default link gitblame SpecialComment"
+      require("gitblame").setup { enabled = false }
+    end,
+  },
+
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 

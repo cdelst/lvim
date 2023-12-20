@@ -1,4 +1,4 @@
-lvim.colorscheme = "everblush"
+lvim.colorscheme = "onedark"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.reload_config_on_save = true

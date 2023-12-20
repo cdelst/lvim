@@ -79,6 +79,21 @@ lvim.builtin.which_key.mappings["g"] = {
     "<cmd>Gitsigns diffthis HEAD<cr>",
     "Diff",
   },
+  B = {
+    name = "Blame",
+    t = { "<cmd>GitBlameToggle<cr>", "Toggle" },
+    c = {
+      name = "Copy",
+      f = { "<cmd>GitBlameCopyFileURL<cr>", "Copy file URL" },
+      c = { "<cmd>GitBlameCopyCommitURL<cr>", "Copy commit URL" },
+      s = { "<cmd>GitBlameCopySHA<cr>", "Copy SHA" },
+    },
+    o = {
+      name = "Open",
+      f = { "<cmd>GitBlameOpenFileURL<cr>", "Open file" },
+      c = { "<cmd>GitBlameOpenCommitURL<cr>", "Open commit" },
+    },
+  },
   G = {
     name = "Gist",
     a = { "<cmd>Gist -b -a<cr>", "Create Anon" },
