@@ -3,7 +3,7 @@ lvim.plugins = {
   {
     "mawkler/modicator.nvim",
   },
-  "HiPhish/nvim-ts-rainbow2",
+  "hiphish/rainbow-delimiters.nvim",
   -- {
   --   dir = "/Users/chris/Repos/bookmark.nvim",
   -- },
@@ -102,12 +102,6 @@ lvim.plugins = {
       require("copilot_cmp").setup()
     end,
   },
-  -- {
-  --   "tzachar/cmp-tabnine",
-  --   event = "BufRead",
-  --   build = "./install.sh",
-  -- },
-
   "MunifTanjim/nui.nvim",
   "Bryley/neoai.nvim",
   "mfussenegger/nvim-dap-python",
@@ -163,6 +157,11 @@ lvim.plugins = {
   },
   {
     "stevearc/conform.nvim",
+    opts = {},
+  },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
   },
 

@@ -11,10 +11,12 @@
 --   }
 -- end
 
+
 lvim.builtin.treesitter.ensure_installed = {
   "java",
   "python",
   "javascript",
+  "typescript",
   "go",
   "scala",
   "terraform",
@@ -38,9 +40,8 @@ lvim.builtin.treesitter.rainbow = {
     -- "TSRainbowGreen",
   },
 }
-
 lvim.builtin.treesitter.autotag.enable = true
-lvim.builtin.treesitter.auto_install = false
+lvim.builtin.treesitter.auto_install = true
 
 -- lvim.builtin.treesitter.ignore_install = { "markdown" }
 

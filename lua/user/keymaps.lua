@@ -26,6 +26,9 @@ end
 
 vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
 
+-- Scrolling with Colemak
+-- vim.keymap.set("n", "<C-Down>", "<C-k>", {})
+-- vim.keymap.set("n", "<C-Up>", "<C-j>", {})
 -- Tabs --
 -- keymap("n", "\\", ":tabnew %<cr>", opts)
 -- keymap("n", "\\", ":tabnew %<cr>", opts)
@@ -33,10 +36,10 @@ vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
 -- keymap("n", "<s-\\>", ":tabonly<cr>", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+-- keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+-- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+-- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 keymap("n", "<c-j>", "<c-d>", opts)
 keymap("n", "<c-k>", "<c-u>", opts)

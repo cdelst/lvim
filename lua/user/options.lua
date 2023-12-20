@@ -56,7 +56,7 @@ local options = {
   wrap = false,
   scrolloff = 0,
   sidescrolloff = 8,
-  guifont = "monospace:h17", -- the font used in graphical neovim applications
+  guifont = "monospace:h20", -- the font used in graphical neovim applications
   title = true,
   titleold = vim.split(os.getenv "SHELL" or "", "/")[3],
 }
