@@ -81,7 +81,7 @@ lvim.builtin.which_key.mappings["g"] = {
   g = { "<cmd>LazyGit<cr>", "LazyGit" },
   j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
   k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-  l = { "<cmd>GitBlameToggle<cr>", "Blame" },
+  l = { "<cmd>LazyGit<cr>", "Lazygit" },
   p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
   r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
   R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
@@ -238,3 +238,9 @@ local hop_mappings = {
 
 lvim.builtin.which_key.mappings["h"] = hop_mappings
 lvim.builtin.which_key.vmappings["h"] = hop_mappings
+
+lvim.builtin.which_key.mappings["L"] = {
+  name = "LunarVim",
+  -- Go to the lunarvim config
+  g = { "<cmd>Oil ~/.config/lvim/lua/user<cr>", "Go to Config" },
+}
