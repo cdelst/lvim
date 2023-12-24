@@ -7,7 +7,7 @@ lvim.builtin.bufferline.active = false
 lvim.builtin.terminal.persist_mode = false
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
-lvim.builtin.breadcrumbs.active = true
+lvim.builtin.breadcrumbs.active = false
 lvim.builtin.dap.active = true
 lvim.keys.term_mode = { ["<C-l>"] = false }
 

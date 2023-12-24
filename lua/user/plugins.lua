@@ -170,6 +170,9 @@ lvim.plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
+  {
+    "SmiteshP/nvim-navic",
+  },
   -- {
   --   "utilyre/barbecue.nvim",
   --   name = "barbecue",
@@ -203,10 +206,16 @@ lvim.plugins = {
   -- },
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
-
-  -- https://github.com/jose-elias-alvarez/typescript.nvim
-  -- "rmagatti/auto-session",
-  -- "rmagatti/session-lens"
-  -- "christianchiarulli/nvim-ts-rainbow",
-  -- "karb94/neoscroll.nvim",
+  {
+    "tzachar/local-highlight.nvim",
+  },
+  {
+    "tpope/vim-surround",
+  },
+  {
+    "stevearc/oil.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 }
