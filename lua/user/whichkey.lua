@@ -1,3 +1,4 @@
+lvim.builtin.which_key.setup.plugins.registers = true
 lvim.builtin.which_key.setup.plugins.presets = {
   operators = true, -- adds help for operators like d, y, ...
   motions = true, -- adds help for motions
@@ -21,6 +22,7 @@ lvim.builtin.which_key.setup.hidden = {
 vim.o.timeout = true
 vim.o.timeoutlen = 100
 
+lvim.builtin.which_key.mappings["c"] = { "<cmd>Telescope commands<cr>", "Commands" }
 lvim.builtin.which_key.mappings["b"] = { "<cmd>Telescope buffers<cr>", "Buffers" }
 lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 lvim.builtin.which_key.mappings["o"] = { "<cmd>AerialToggle!<cr>", "Aerial Outline" }

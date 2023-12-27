@@ -4,10 +4,7 @@ lvim.plugins = {
     "mawkler/modicator.nvim",
   },
   "hiphish/rainbow-delimiters.nvim",
-  -- {
-  --   dir = "/Users/chris/Repos/bookmark.nvim",
-  -- },
-  "andymass/vim-matchup",
+  -- "andymass/vim-matchup",
   "lunarvim/synthwave84.nvim",
   {
     "kndndrj/nvim-dbee",
@@ -60,7 +57,6 @@ lvim.plugins = {
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
-  -- "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
     version = "v0.3.0",
@@ -85,6 +81,14 @@ lvim.plugins = {
     end,
   },
   { "christianchiarulli/telescope-tabs", branch = "chris" },
+  -- Lazy
+  {
+    "piersolenski/telescope-import.nvim",
+    dependencies = "nvim-telescope/telescope.nvim",
+    config = function()
+      require("telescope").load_extension "import"
+    end,
+  },
   "monaqa/dial.nvim",
   {
     "0x100101/lab.nvim",
@@ -170,21 +174,7 @@ lvim.plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
-  {
-    "SmiteshP/nvim-navic",
-  },
-  -- {
-  --   "utilyre/barbecue.nvim",
-  --   name = "barbecue",
-  --   version = "*",
-  --   dependencies = {
-  --     "SmiteshP/nvim-navic",
-  --     "nvim-tree/nvim-web-devicons", -- optional dependency
-  --   },
-  --   opts = {
-  --     -- configurations go here
-  --   },
-  -- },
+  { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" }, opts = { lsp = { auto_attach = true } } },
   {
     "f-person/git-blame.nvim",
     event = "BufRead",
@@ -227,10 +217,82 @@ lvim.plugins = {
       "MunifTanjim/nui.nvim",
 
       -- optional
-      "nvim-treesitter/nvim-treesitter", "rcarriga/nvim-notify", "nvim-tree/nvim-web-devicons",
+      "nvim-treesitter/nvim-treesitter",
+      "rcarriga/nvim-notify",
+      "nvim-tree/nvim-web-devicons",
     },
     opts = {
-      -- configuration goes here
+      ---@type string
+      arg = "leetcode.nvim",
+
+      ---@type lc.lang
+      lang = "python",
+
+      cn = { -- leetcode.cn
+        enabled = false, ---@type boolean
+        translator = true, ---@type boolean
+        translate_problems = true, ---@type boolean
+      },
+
+      ---@type string
+      directory = vim.fn.stdpath "data" .. "/leetcode/",
+
+      ---@type boolean
+      logging = true,
+
+      cache = {
+        update_interval = 60 * 60 * 24 * 7, ---@type integer 7 days
+      },
+
+      console = {
+        open_on_runcode = true, ---@type boolean
+
+        dir = "row", ---@type lc.direction
+
+        size = { ---@type lc.size
+          width = "90%",
+          height = "75%",
+        },
+
+        result = {
+          size = "60%", ---@type lc.size
+        },
+
+        testcase = {
+          virt_text = true, ---@type boolean
+
+          size = "40%", ---@type lc.size
+        },
+      },
+
+      description = {
+        position = "left", ---@type lc.position
+
+        width = "40%", ---@type lc.size
+
+        show_stats = true, ---@type boolean
+      },
+
+      hooks = {
+        ---@type fun()[]
+        LeetEnter = {},
+
+        ---@type fun(question: { lang: string })[]
+        LeetQuestionNew = {},
+      },
+
+      ---@type boolean
+      image_support = false, -- setting this to `true` will disable question description wrap
+
+      keys = {
+        toggle = { "q", "<Esc>" }, ---@type string|string[]
+        confirm = { "<CR>" }, ---@type string|string[]
+
+        reset_testcases = "r", ---@type string
+        use_testcase = "U", ---@type string
+        focus_testcases = "H", ---@type string
+        focus_result = "L", ---@type string
+      },
     },
   },
 }
